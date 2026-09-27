@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products — ShopSphere</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">Shop<span>Sphere</span></a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li>
+            <form action="products.html" method="get">
+              <input type="search" name="search" id="nav-search" placeholder="Search products..." aria-label="Search products" />
+            </form>
+          </li>
+          <li><a href="login.html">Login</a></li>
+          <li>
+            <a href="cart.html" class="nav-icon-link" aria-label="View cart">
+              &#128722;
+              <span id="cart-count" class="cart-badge">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <section class="section container">
+    <h2 class="section-title">All Products</h2>
+    <p class="section-subtitle" id="results-count"></p>
+
+    <!-- Filter controls -->
+    <div class="filters-bar">
+      <input type="text" id="search-input" class="search-box" placeholder="Search by product name..." />
+
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <!-- options filled in by JavaScript -->
+      </select>
+
+      <select id="price-filter">
+        <option value="all">All Prices</option>
+        <option value="0-1000">Under ₹1,000</option>
+        <option value="1000-2000">₹1,000 – ₹2,000</option>
+        <option value="2000-5000">₹2,000 – ₹5,000</option>
+        <option value="5000-100000">Above ₹5,000</option>
+      </select>
+
+      <button id="clear-filters" class="btn btn-outline btn-small">Clear Filters</button>
+    </div>
+
+    <!-- Product grid -->
+    <div class="product-grid" id="product-grid">
+      <!-- Filled in by products.js -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-col">
+        <h4>ShopSphere</h4>
+        <p>A frontend e-commerce demo built with HTML, CSS and vanilla JavaScript.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#">support@shopsphere.demo</a>
+        <a href="#">+91 90000 00000</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 ShopSphere. Student project for demonstration purposes only.</div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script> <!-- reused for buildProductCardHTML() -->
+  <script src="js/products.js"></script>
+</body>
+</html>

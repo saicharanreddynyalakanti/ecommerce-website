@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — ShopSphere</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">Shop<span>Sphere</span></a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="login.html" class="active">Login</a></li>
+          <li>
+            <a href="cart.html" class="nav-icon-link" aria-label="View cart">
+              &#128722;
+              <span id="cart-count" class="cart-badge">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="form-page">
+    <div class="form-card">
+      <h1>Log in</h1>
+      <p class="form-note">
+        Demo only: this form does not connect to a real account system. No data is verified or stored on a server.
+      </p>
+
+      <form id="login-form" novalidate>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <span class="field-error" id="email-error">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required />
+          <span class="field-error" id="password-error">Password must be at least 6 characters.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Log In</button>
+      </form>
+
+      <p class="form-footer-text">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
